@@ -1,14 +1,14 @@
 {
   "expo": {
-    "name": "cow-app",
+    "name": "Cow Breeds",
     "slug": "cow-app",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/cow1.png",
+    "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
-      "resizeMode": "contain",
+      "resizeMode": "cover",
       "backgroundColor": "#ffffff"
     },
     "updates": {
@@ -20,9 +20,10 @@
     },
     "android": {
       "adaptiveIcon": {
-        "foregroundImage": "./assets/cow1.png",
+        "foregroundImage": "./assets/icon.png",
         "backgroundColor": "#47CD75"
-      }
+      },
+      "package": "com.srijan67.cowapp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
