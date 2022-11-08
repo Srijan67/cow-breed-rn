@@ -7,6 +7,7 @@ import Home from "./src/screens/home";
 import Breeds from "./src/screens/breeds";
 import { Ionicons } from "@expo/vector-icons";
 import AddNew from "./src/screens/addNew";
+import Details from "./src/screens/details";
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
 const options = {
@@ -64,6 +65,19 @@ export default function App() {
               fontSize: 18,
             },
             headerTitle: "Add new",
+          }}
+        />
+        <Stack.Screen
+          name="Details"
+          component={Details}
+          options={{
+            ...options,
+            headerTitleAlign: "left",
+            headerTitleStyle: {
+              color: "#D2FFE2",
+              fontSize: 18,
+            },
+            headerTitle: "Details",
           }}
         />
       </Stack.Navigator>

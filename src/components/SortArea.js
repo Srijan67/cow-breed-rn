@@ -9,7 +9,7 @@ import {
   View,
 } from "react-native";
 
-const SortArea = ({ add }) => {
+const SortArea = ({ add, details }) => {
   return (
     <View style={style.containter}>
       <TouchableOpacity style={style.box} onPress={() => add()}>
@@ -20,16 +20,19 @@ const SortArea = ({ add }) => {
           </Text>
         </View>
       </TouchableOpacity>
-      <View style={style.box}>
+      <TouchableOpacity style={style.box} onPress={() => details()}>
         <View style={style.content}>
           <Image
-            style={{ width: 110, height: 104 }}
+            style={{
+              width: 110,
+              height: 104,
+            }}
             source={require("../../assets/rect1.png")}
           />
           <Text style={{ fontWeight: "700", fontSize: 14 }}>Breed 1</Text>
           <Text style={{ fontWeight: "700", fontSize: 14 }}>20</Text>
         </View>
-      </View>
+      </TouchableOpacity>
     </View>
   );
 };

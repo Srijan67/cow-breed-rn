@@ -21,7 +21,10 @@ const Breeds = ({ navigation }) => {
       <Text style={{ margin: 10 }}>
         Sort by: <Text style={{ fontSize: 15, fontWeight: "500" }}>New</Text>
       </Text>
-      <SortArea add={() => navigation.navigate("AddNew")} />
+      <SortArea
+        add={() => navigation.navigate("AddNew")}
+        details={() => navigation.navigate("Details")}
+      />
     </SafeAreaView>
   );
 };
