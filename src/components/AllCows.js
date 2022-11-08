@@ -8,7 +8,7 @@ import {
   View,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
-const AllCows = () => {
+const AllCows = (props) => {
   return (
     <View>
       <View style={style.head}>
@@ -18,13 +18,20 @@ const AllCows = () => {
         </TouchableOpacity>
       </View>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-        <View style={style.card}>
+        <TouchableOpacity
+          style={style.card}
+          onPress={() => {
+            return props.add();
+          }}
+        >
           <View style={style.content}>
-            <Ionicons name="add-circle-outline" size={60} color="black" />
-            <Text style={{ fontWeight: "700", fontSize: 16 }}>Add new</Text>
+            <Ionicons name="add-circle-outline" size={55} color="black" />
+            <Text style={{ fontWeight: "700", fontSize: 16, marginTop: 10 }}>
+              Add new
+            </Text>
           </View>
-        </View>
-        <View style={style.card}>
+        </TouchableOpacity>
+        <TouchableOpacity style={style.card}>
           <View style={style.content}>
             <Image
               style={{ height: 96, width: 92 }}
@@ -33,8 +40,8 @@ const AllCows = () => {
             <Text style={{ fontWeight: "700", fontSize: 14 }}>Breed 1</Text>
             <Text style={{ fontWeight: "700", fontSize: 14 }}>20</Text>
           </View>
-        </View>
-        <View style={style.card}>
+        </TouchableOpacity>
+        <TouchableOpacity style={style.card}>
           <View style={style.content}>
             <Image
               style={{ height: 96, width: 92 }}
@@ -43,8 +50,8 @@ const AllCows = () => {
             <Text style={{ fontWeight: "700", fontSize: 14 }}>Breed 2</Text>
             <Text style={{ fontWeight: "700", fontSize: 14 }}>10</Text>
           </View>
-        </View>
-        <View style={style.card}>
+        </TouchableOpacity>
+        <TouchableOpacity style={style.card}>
           <View style={style.content}>
             <Image
               style={{ height: 96, width: 92 }}
@@ -53,7 +60,7 @@ const AllCows = () => {
             <Text style={{ fontWeight: "700", fontSize: 14 }}>Breed 3</Text>
             <Text style={{ fontWeight: "700", fontSize: 14 }}>20</Text>
           </View>
-        </View>
+        </TouchableOpacity>
       </ScrollView>
     </View>
   );

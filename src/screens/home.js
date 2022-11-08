@@ -12,15 +12,15 @@ import {
 import AllCows from "../components/AllCows";
 import Explore from "../components/Explore";
 const height = Dimensions.get("screen").height / 100;
-const Home = () => {
+const Home = ({ navigation }) => {
   return (
     <SafeAreaView style={{ backgroundColor: "#fff", minHeight: height * 100 }}>
-      <AllCows />
+      <AllCows add={() => navigation.navigate("AddNew")} />
       <Explore />
       <View style={style.floatBtn}>
         <TouchableOpacity
           onPress={() => {
-            return console.log(" HI CLIECKED");
+            return navigation.navigate("AddNew");
           }}
         >
           <Ionicons name="add-circle-outline" size={55} color="#47CD75" />
@@ -35,7 +35,7 @@ const style = StyleSheet.create({
   floatBtn: {
     position: "absolute",
     zIndex: 1000,
-    top: height * 67,
+    top: height * 70,
     right: 25,
   },
 });

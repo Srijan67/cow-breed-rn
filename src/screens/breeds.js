@@ -1,10 +1,11 @@
 import { Ionicons } from "@expo/vector-icons";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { SafeAreaView, StyleSheet, Text, TextInput, View } from "react-native";
 import SortArea from "../components/SortArea";
 
-const Breeds = () => {
+const Breeds = ({ navigation }) => {
   const [search, setSearch] = useState("");
+
   return (
     <SafeAreaView style={style.container}>
       <View style={style.textArea}>
@@ -13,14 +14,14 @@ const Breeds = () => {
           style={style.inputs}
           placeholder="Search here"
           onChangeText={(e) => setSearch(e)}
-          placeholderTextColor={"#000"}
+          placeholderTextColor={"#999999"}
         />
         <Ionicons name="search" size={24} color="black" />
       </View>
       <Text style={{ margin: 10 }}>
         Sort by: <Text style={{ fontSize: 15, fontWeight: "500" }}>New</Text>
       </Text>
-      <SortArea />
+      <SortArea add={() => navigation.navigate("AddNew")} />
     </SafeAreaView>
   );
 };
@@ -35,7 +36,6 @@ const style = StyleSheet.create({
     borderRadius: 10,
     marginTop: 10,
     marginHorizontal: 13,
-
     backgroundColor: "#F7F8FD",
     display: "flex",
     flexDirection: "row",

@@ -12,9 +12,11 @@ const height = Dimensions.get("window").height;
 const Explore = () => {
   return (
     <View style={style.container}>
-      <Text style={{ fontWeight: "700", fontSize: 16 }}>Explore</Text>
+      <Text style={{ fontWeight: "700", fontSize: 16, marginLeft: 10 }}>
+        Explore
+      </Text>
       <View style={style.gridArea}>
-        <View style={[style.card]}>
+        <TouchableOpacity style={[style.card]}>
           <View style={style.content}>
             <Image
               style={{ width: 130, height: 130 }}
@@ -22,8 +24,8 @@ const Explore = () => {
             />
             <Text style={{ fontWeight: "700", fontSize: 14 }}>Veterinary</Text>
           </View>
-        </View>
-        <View style={[style.card]}>
+        </TouchableOpacity>
+        <TouchableOpacity style={[style.card]}>
           <View style={style.content}>
             <Image
               style={{ width: 130, height: 130 }}
@@ -31,8 +33,8 @@ const Explore = () => {
             />
             <Text style={{ fontWeight: "700", fontSize: 14 }}>Market</Text>
           </View>
-        </View>
-        <View style={[style.card]}>
+        </TouchableOpacity>
+        <TouchableOpacity style={[style.card]}>
           <View style={style.content}>
             <Image
               style={{ width: 130, height: 130 }}
@@ -42,8 +44,8 @@ const Explore = () => {
               Registration
             </Text>
           </View>
-        </View>
-        <View style={style.card}>
+        </TouchableOpacity>
+        <TouchableOpacity style={style.card}>
           <View style={style.content}>
             <Image
               style={{ width: 130, height: 130 }}
@@ -53,7 +55,7 @@ const Explore = () => {
               Ownership Transfer
             </Text>
           </View>
-        </View>
+        </TouchableOpacity>
       </View>
     </View>
   );
@@ -69,15 +71,15 @@ const style = StyleSheet.create({
     flexDirection: "row",
   },
   card: {
-    width: 152,
-    height: 172,
+    width: 172,
+    height: 192,
     backgroundColor: "#F7F8FD",
     borderRadius: 8,
-    marginBottom: 10,
-    marginRight: 20,
+    marginBottom: 15,
+    marginHorizontal: 10,
   },
   container: {
-    marginLeft: 10,
+    marginLeft: 0,
     marginTop: 10,
   },
   content: {
