@@ -27,12 +27,11 @@ const options = {
     </TouchableOpacity>
   ),
   headerRight: () => (
-    <TouchableOpacity>
+    <TouchableOpacity style={{ marginRight: 19 }}>
       <Image
         style={{
           width: 15,
           height: 17,
-          marginRight: 19,
           marginBottom: 19,
           marginTop: 26,
         }}
@@ -53,6 +52,7 @@ const options = {
 export default function App() {
   return (
     <NavigationContainer>
+      <StatusBar backgroundColor="#47CD75" />
       <Stack.Navigator
         initialRouteName="Homes"
         screenOptions={{
@@ -70,7 +70,20 @@ export default function App() {
           name="AddNew"
           component={AddNew}
           options={{
-            ...options,
+            headerRight: () => (
+              <TouchableOpacity>
+                <Image
+                  style={{
+                    width: 15,
+                    height: 17,
+                    marginBottom: 19,
+                    marginTop: 26,
+                    marginRight: 5,
+                  }}
+                  source={require("./assets/notify.png")}
+                />
+              </TouchableOpacity>
+            ),
             headerTitleAlign: "left",
             headerTitleStyle: {
               color: "#D2FFE2",
@@ -83,7 +96,20 @@ export default function App() {
           name="Details"
           component={Details}
           options={{
-            ...options,
+            headerRight: () => (
+              <TouchableOpacity>
+                <Image
+                  style={{
+                    width: 15,
+                    height: 17,
+                    marginBottom: 19,
+                    marginRight: 5,
+                    marginTop: 26,
+                  }}
+                  source={require("./assets/notify.png")}
+                />
+              </TouchableOpacity>
+            ),
             headerTitleAlign: "left",
             headerTitleStyle: {
               color: "#D2FFE2",
