@@ -1,4 +1,4 @@
-import { Feather, Ionicons } from "@expo/vector-icons";
+import { AntDesign, Feather, Ionicons } from "@expo/vector-icons";
 import React, { useEffect, useRef, useState } from "react";
 import {
   Image,
@@ -14,8 +14,10 @@ const Details = ({ navigation }) => {
   const animation = useRef(null);
 
   const [tagId, setTagId] = useState("#1212");
-  const [breedName, setBreedName] = useState("Lorem ipsum");
-  const [cowsNum, setCowsNum] = useState("20");
+  const [name, setName] = useState("Lorem ipsum");
+  const [breed, setBreed] = useState("Hariana");
+  const [dob, setDob] = useState("12-03-2020");
+  const [weight, setWeight] = useState("120 Kg");
   const [done, setDone] = useState(false);
   useEffect(() => {
     navigation.setOptions({
@@ -44,7 +46,7 @@ const Details = ({ navigation }) => {
             marginLeft: "auto",
             marginRight: "auto",
           }}
-          source={require("../../assets/rect1.png")}
+          source={require("../../assets/white-cow.png")}
         />
         <View style={style.camArea}>
           <Feather name="camera" size={20} color="#999" />
@@ -59,22 +61,79 @@ const Details = ({ navigation }) => {
           />
         </View>
         <View style={style.textView}>
-          <Text style={style.inputhead}>Breed Name</Text>
+          <Text style={style.inputhead}>Name</Text>
           <TextInput
             style={style.inputs}
-            value={breedName}
+            value={name}
             onChangeText={(e) => setTagId(e)}
-            placeholder="Enter Breed Name"
+            placeholder="Enter Name"
           />
         </View>
         <View style={style.textView}>
-          <Text style={style.inputhead}>No. of cows</Text>
+          <Text style={style.inputhead}>Breed</Text>
           <TextInput
             style={style.inputs}
-            value={cowsNum}
+            value={breed}
             onChangeText={(e) => setTagId(e)}
-            placeholder="Enter No. of cows"
+            placeholder="Enter Breed"
           />
+        </View>
+        <View style={style.textView}>
+          <Text style={style.inputhead}>Date of birth</Text>
+          <TextInput
+            style={style.inputs}
+            value={dob}
+            onChangeText={(e) => setDob(e)}
+            placeholder="Enter DOB"
+          />
+        </View>
+        <View style={style.textView}>
+          <Text style={style.inputhead}>Weight</Text>
+          <TextInput
+            style={style.inputs}
+            value={weight}
+            onChangeText={(e) => setWeight(e)}
+            placeholder="Enter Weight"
+          />
+        </View>
+      </View>
+      <View style={style.box}>
+        <View style={[style.textView, { marginBottom: 0, borderRadius: 15 }]}>
+          <Text>Medical Details</Text>
+          <TouchableOpacity>
+            <AntDesign
+              style={{ marginLeft: "auto" }}
+              name="right"
+              size={20}
+              color="#47CD75"
+            />
+          </TouchableOpacity>
+        </View>
+      </View>
+      <View style={style.box}>
+        <View style={[style.textView, { marginBottom: 0, borderRadius: 15 }]}>
+          <Text>Parental Details</Text>
+          <TouchableOpacity>
+            <AntDesign
+              style={{ marginLeft: "auto" }}
+              name="right"
+              size={20}
+              color="#47CD75"
+            />
+          </TouchableOpacity>
+        </View>
+      </View>
+      <View style={style.box}>
+        <View style={[style.textView, { marginBottom: 0, borderRadius: 15 }]}>
+          <Text>Ownership</Text>
+          <TouchableOpacity>
+            <AntDesign
+              style={{ marginLeft: "auto" }}
+              name="right"
+              size={20}
+              color="#47CD75"
+            />
+          </TouchableOpacity>
         </View>
       </View>
       <TouchableOpacity
@@ -118,7 +177,7 @@ const style = StyleSheet.create({
   box: {
     backgroundColor: "#F7F8FD",
     borderRadius: 15,
-    marginHorizontal: 12,
+    marginHorizontal: 16,
     marginTop: 15,
     padding: 10,
   },
@@ -167,11 +226,16 @@ const style = StyleSheet.create({
     marginTop: "auto",
     marginLeft: "auto",
     backgroundColor: "#47CD75",
-    paddingHorizontal: 30,
-    paddingVertical: 10,
+    // paddingHorizontal: 30,
+    // paddingVertical: 10,
+    width: 115,
+    height: 40,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
     borderRadius: 8,
-    marginBottom: 30,
-    marginRight: 20,
+    marginBottom: 39,
+    marginRight: 16,
   },
   textSubmit: {
     color: "#fff",
@@ -185,6 +249,6 @@ const style = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#999",
+    backgroundColor: "rgba(0,0,0,0.2)",
   },
 });

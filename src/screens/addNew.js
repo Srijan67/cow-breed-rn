@@ -20,13 +20,11 @@ const AddNew = ({ navigation }) => {
     navigation.setOptions({
       headerLeft: () => {
         return (
-          <TouchableOpacity onPress={() => navigation.goBack()}>
-            <Ionicons
-              style={{ marginRight: 10 }}
-              name="chevron-back"
-              size={24}
-              color="#fff"
-            />
+          <TouchableOpacity
+            style={{ marginRight: 9 }}
+            onPress={() => navigation.goBack()}
+          >
+            <Ionicons name="chevron-back" size={24} color="#fff" />
           </TouchableOpacity>
         );
       },
@@ -78,7 +76,7 @@ const AddNew = ({ navigation }) => {
         <Text style={style.textSubmit}>Done</Text>
       </TouchableOpacity>
 
-      <Modal visible={done}>
+      <Modal visible={done} transparent={true}>
         <View style={style.lottieStyle}>
           <LottieView
             autoPlay
@@ -108,7 +106,7 @@ const style = StyleSheet.create({
   box: {
     backgroundColor: "#F7F8FD",
     borderRadius: 15,
-    marginHorizontal: 12,
+    marginHorizontal: 16,
     marginTop: 15,
     padding: 10,
   },
@@ -157,11 +155,16 @@ const style = StyleSheet.create({
     marginTop: "auto",
     marginLeft: "auto",
     backgroundColor: "#47CD75",
-    paddingHorizontal: 30,
-    paddingVertical: 10,
+    // paddingHorizontal: 30,
+    // paddingVertical: 10,
+    width: 115,
+    height: 40,
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
     borderRadius: 8,
-    marginBottom: 30,
-    marginRight: 20,
+    marginBottom: 39,
+    marginRight: 16,
   },
   textSubmit: {
     color: "#fff",
@@ -175,6 +178,6 @@ const style = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "#999",
+    backgroundColor: "rgba(0,0,0,0.2)",
   },
 });

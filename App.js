@@ -15,7 +15,13 @@ const options = {
   headerLeft: () => (
     <TouchableOpacity>
       <Image
-        style={{ width: 18, height: 12, marginLeft: 10 }}
+        style={{
+          width: 18,
+          height: 12,
+          marginLeft: 16,
+          marginTop: 31,
+          marginBottom: 19,
+        }}
         source={require("./assets/menu.png")}
       />
     </TouchableOpacity>
@@ -23,7 +29,13 @@ const options = {
   headerRight: () => (
     <TouchableOpacity>
       <Image
-        style={{ width: 15, height: 17, marginRight: 10 }}
+        style={{
+          width: 15,
+          height: 17,
+          marginRight: 19,
+          marginBottom: 19,
+          marginTop: 26,
+        }}
         source={require("./assets/notify.png")}
       />
     </TouchableOpacity>
@@ -31,7 +43,7 @@ const options = {
   headerTitle: () => {
     return (
       <Image
-        style={{ width: 63, height: 53 }}
+        style={{ width: 63, height: 53, marginTop: 5, marginBottom: 4 }}
         source={require("./assets/cow1.png")}
       />
     );

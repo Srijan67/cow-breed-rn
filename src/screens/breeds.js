@@ -18,7 +18,7 @@ const Breeds = ({ navigation }) => {
         />
         <Ionicons name="search" size={24} color="black" />
       </View>
-      <Text style={{ margin: 10 }}>
+      <Text style={{ margin: 16, marginTop: 22 }}>
         Sort by: <Text style={{ fontSize: 15, fontWeight: "500" }}>New</Text>
       </Text>
       <SortArea
@@ -38,7 +38,7 @@ const style = StyleSheet.create({
   textArea: {
     borderRadius: 10,
     marginTop: 10,
-    marginHorizontal: 13,
+    marginHorizontal: 16,
     backgroundColor: "#F7F8FD",
     display: "flex",
     flexDirection: "row",

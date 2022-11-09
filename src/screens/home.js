@@ -15,16 +15,18 @@ const height = Dimensions.get("screen").height / 100;
 const Home = ({ navigation }) => {
   return (
     <SafeAreaView style={{ backgroundColor: "#fff", minHeight: height * 100 }}>
-      <AllCows add={() => navigation.navigate("AddNew")} />
-      <Explore />
-      <View style={style.floatBtn}>
-        <TouchableOpacity
-          onPress={() => {
-            return navigation.navigate("AddNew");
-          }}
-        >
-          <Ionicons name="add-circle-outline" size={55} color="#47CD75" />
-        </TouchableOpacity>
+      <View style={{ marginLeft: 16 }}>
+        <AllCows add={() => navigation.navigate("AddNew")} />
+        <Explore />
+        <View style={style.floatBtn}>
+          <TouchableOpacity
+            onPress={() => {
+              return navigation.navigate("AddNew");
+            }}
+          >
+            <Ionicons name="add-circle-outline" size={55} color="#47CD75" />
+          </TouchableOpacity>
+        </View>
       </View>
     </SafeAreaView>
   );

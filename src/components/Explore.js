@@ -12,9 +12,7 @@ const height = Dimensions.get("window").height;
 const Explore = () => {
   return (
     <View style={style.container}>
-      <Text style={{ fontWeight: "700", fontSize: 16, marginLeft: 10 }}>
-        Explore
-      </Text>
+      <Text style={{ fontWeight: "700", fontSize: 16 }}>Explore</Text>
       <View style={style.gridArea}>
         <TouchableOpacity style={[style.card]}>
           <View style={style.content}>
@@ -22,7 +20,9 @@ const Explore = () => {
               style={{ width: 130, height: 130 }}
               source={require("../../assets/rect2.png")}
             />
-            <Text style={{ fontWeight: "700", fontSize: 14 }}>Veterinary</Text>
+            <Text style={{ fontWeight: "700", fontSize: 14, marginTop: 13 }}>
+              Veterinary
+            </Text>
           </View>
         </TouchableOpacity>
         <TouchableOpacity style={[style.card]}>
@@ -31,7 +31,9 @@ const Explore = () => {
               style={{ width: 130, height: 130 }}
               source={require("../../assets/rect3.png")}
             />
-            <Text style={{ fontWeight: "700", fontSize: 14 }}>Market</Text>
+            <Text style={{ fontWeight: "700", fontSize: 14, marginTop: 13 }}>
+              Market
+            </Text>
           </View>
         </TouchableOpacity>
         <TouchableOpacity style={[style.card]}>
@@ -40,7 +42,7 @@ const Explore = () => {
               style={{ width: 130, height: 130 }}
               source={require("../../assets/rect4.png")}
             />
-            <Text style={{ fontWeight: "700", fontSize: 14 }}>
+            <Text style={{ fontWeight: "700", fontSize: 14, marginTop: 13 }}>
               Registration
             </Text>
           </View>
@@ -51,7 +53,7 @@ const Explore = () => {
               style={{ width: 130, height: 130 }}
               source={require("../../assets/rect5.png")}
             />
-            <Text style={{ fontWeight: "700", fontSize: 14 }}>
+            <Text style={{ fontWeight: "700", fontSize: 14, marginTop: 13 }}>
               Ownership Transfer
             </Text>
           </View>
@@ -76,10 +78,9 @@ const style = StyleSheet.create({
     backgroundColor: "#F7F8FD",
     borderRadius: 8,
     marginBottom: 15,
-    marginHorizontal: 10,
+    marginRight: 20,
   },
   container: {
-    marginLeft: 0,
     marginTop: 10,
   },
   content: {

@@ -72,7 +72,6 @@ const style = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
-    paddingHorizontal: 10,
     paddingTop: 10,
   },
   card: {
@@ -81,9 +80,9 @@ const style = StyleSheet.create({
     width: 116,
     height: 132,
     textAlign: "center",
-    marginLeft: 10,
     marginTop: 10,
     paddingBottom: 4,
+    marginRight: 24,
   },
   content: {
     display: "flex",
