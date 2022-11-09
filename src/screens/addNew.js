@@ -21,7 +21,7 @@ const AddNew = ({ navigation }) => {
       headerLeft: () => {
         return (
           <TouchableOpacity
-            style={{ marginRight: 9 }}
+            style={{ marginRight: 3 }}
             onPress={() => navigation.goBack()}
           >
             <Ionicons name="chevron-back" size={24} color="#fff" />
@@ -76,7 +76,7 @@ const AddNew = ({ navigation }) => {
         <Text style={style.textSubmit}>Done</Text>
       </TouchableOpacity>
 
-      <Modal visible={done} transparent={true}>
+      <Modal visible={done} transparent={true} animationType="fade">
         <View style={style.lottieStyle}>
           <LottieView
             autoPlay
@@ -182,6 +182,6 @@ const style = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "rgba(0,0,0,0.2)",
+    backgroundColor: "rgba(0,0,0,0.1)",
   },
 });

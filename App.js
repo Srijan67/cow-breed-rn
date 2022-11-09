@@ -89,7 +89,7 @@ export default function App() {
               color: "#D2FFE2",
               fontSize: 18,
             },
-            headerTitle: "Details",
+            headerTitle: "Add new",
           }}
         />
       </Stack.Navigator>

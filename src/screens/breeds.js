@@ -16,7 +16,12 @@ const Breeds = ({ navigation }) => {
           onChangeText={(e) => setSearch(e)}
           placeholderTextColor={"#999999"}
         />
-        <Ionicons name="search" size={24} color="black" />
+        <Ionicons
+          style={{ marginRight: 10 }}
+          name="search"
+          size={21}
+          color="black"
+        />
       </View>
       <Text style={{ margin: 16, marginTop: 22 }}>
         Sort by: <Text style={{ fontSize: 15, fontWeight: "500" }}>New</Text>
