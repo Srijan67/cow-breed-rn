@@ -48,9 +48,9 @@ const Details = ({ navigation }) => {
           }}
           source={require("../../assets/white-cow.png")}
         />
-        <View style={style.camArea}>
+        <TouchableOpacity style={style.camArea}>
           <Feather name="camera" size={20} color="#999" />
-        </View>
+        </TouchableOpacity>
         <View style={style.textView}>
           <Text style={style.inputhead}>Tag ID</Text>
           <TextInput
@@ -97,9 +97,11 @@ const Details = ({ navigation }) => {
           />
         </View>
       </View>
-      <View style={style.box}>
-        <View style={[style.textView, { marginBottom: 0, borderRadius: 15 }]}>
-          <Text>Medical Details</Text>
+      <View style={[style.box, { borderRadius: 30 }]}>
+        <View style={[style.textView, { marginBottom: 0, marginRight: 9 }]}>
+          <Text style={[style.inputhead, { color: "#505050" }]}>
+            Medical Details
+          </Text>
           <TouchableOpacity>
             <AntDesign
               style={{ marginLeft: "auto" }}
@@ -110,8 +112,8 @@ const Details = ({ navigation }) => {
           </TouchableOpacity>
         </View>
       </View>
-      <View style={style.box}>
-        <View style={[style.textView, { marginBottom: 0, borderRadius: 15 }]}>
+      <View style={[style.box, { borderRadius: 30 }]}>
+        <View style={[style.textView, { marginBottom: 0, marginRight: 9 }]}>
           <Text>Parental Details</Text>
           <TouchableOpacity>
             <AntDesign
@@ -123,8 +125,8 @@ const Details = ({ navigation }) => {
           </TouchableOpacity>
         </View>
       </View>
-      <View style={style.box}>
-        <View style={[style.textView, { marginBottom: 0, borderRadius: 15 }]}>
+      <View style={[style.box, { borderRadius: 30 }]}>
+        <View style={[style.textView, { marginBottom: 0, marginRight: 9 }]}>
           <Text>Ownership</Text>
           <TouchableOpacity>
             <AntDesign
@@ -209,13 +211,15 @@ const style = StyleSheet.create({
     alignItems: "center",
     justifyContent: "space-between",
     marginBottom: 20,
+    marginLeft: 16,
+    marginRight: 21,
   },
   inputs: {
     borderRadius: 8,
     width: "70%",
     backgroundColor: "#fff",
     fontWeight: "700",
-    paddingHorizontal: 10,
+    paddingHorizontal: 9,
     fontSize: 13,
   },
   inputhead: {

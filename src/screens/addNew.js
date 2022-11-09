@@ -34,9 +34,9 @@ const AddNew = ({ navigation }) => {
     <View style={{ minHeight: "100%", backgroundColor: "#fff" }}>
       <View style={style.box}>
         <View style={style.displayPic} />
-        <View style={style.camArea}>
+        <TouchableOpacity style={style.camArea}>
           <Feather name="camera" size={20} color="#999" />
-        </View>
+        </TouchableOpacity>
         <View style={style.textView}>
           <Text style={style.inputhead}>Tag ID</Text>
           <TextInput
@@ -109,6 +109,7 @@ const style = StyleSheet.create({
     marginHorizontal: 16,
     marginTop: 15,
     padding: 10,
+    paddingBottom: 8,
   },
   displayPic: {
     width: 94,
@@ -120,7 +121,7 @@ const style = StyleSheet.create({
   },
   camArea: {
     backgroundColor: "#fff",
-    padding: 7,
+    padding: 6,
     marginLeft: "auto",
     marginRight: "auto",
     borderRadius: 50,
@@ -131,20 +132,23 @@ const style = StyleSheet.create({
     elevation: 7,
     shadowOpacity: 1,
     shadowRadius: 10,
+    marginBottom: 5,
   },
   textView: {
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    marginBottom: 20,
+    marginBottom: 16,
+    marginLeft: 16,
+    marginRight: 21,
   },
   inputs: {
     borderRadius: 8,
     width: "70%",
     backgroundColor: "#fff",
     fontWeight: "700",
-    paddingHorizontal: 10,
+    paddingHorizontal: 9,
     fontSize: 13,
   },
   inputhead: {
